@@ -22,7 +22,7 @@ app.get('/produtos', async function(req, res){
   }
 });
 
-app.post('/produtos', async function(req, res){
+app.post('/inserir', async function(req, res){
   try {
     var produto = await Produto.insert(req.body);
     res.json(produto.rows);
@@ -32,7 +32,7 @@ app.post('/produtos', async function(req, res){
   }
 });
 
-app.put('/produtos', async function(req, res){
+app.put('/atualizar', async function(req, res){
   try {
     var produto = await Produto.update(req.body.id, req.body);
     res.json(produto.rows);
@@ -42,7 +42,7 @@ app.put('/produtos', async function(req, res){
   }
 });
 
-app.delete('/produtos', async function(req, res){
+app.delete('/deletar', async function(req, res){
   try {
     var produto = await Produto.delete(req.body.id);
     res.json(produto.rows);
