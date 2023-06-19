@@ -4,7 +4,7 @@ class Produto {
   static async select() {
     try {
       const connect = await db.connect();
-      return await connect.query('SELECT * FROM pessoas');
+      return await connect.query('SELECT * FROM produto');
     } catch (error) {
       console.error('Erro em select:', error);
       throw error;
@@ -15,7 +15,7 @@ class Produto {
     try {
       console.log("teste")
       const connect = await db.connect();
-      const sql = 'INSERT INTO produtos(titulo, data_cadastro, preco, imagem, descricao) VALUES ($1, $2, $3, $4, $5) RETURNING id, titulo, data_cadastro, preco, imagem, descricao;';
+      const sql = 'INSERT INTO produto(titulo, data_cadastro, preco, imagem, descricao) VALUES ($1, $2, $3, $4, $5) RETURNING id, titulo, data_cadastro, preco, imagem, descricao;';
       const values = [data.titulo, data.data_cadastro, data.preco, data.imagem, data.descricao]; 
       return await connect.query(sql, values);
     } catch (error) {
@@ -27,7 +27,7 @@ class Produto {
   static async update(id, data) {
     try {
       const connect = await db.connect();
-      const sql = 'UPDATE produtos SET titulo=$1, data_cadastro=$2, preco=$3 imagem=$4 descricao=$5 WHERE id=$6 RETURNING id, titulo, data_cadastro, preco, imagem, descricao;';
+      const sql = 'UPDATE produto SET titulo=$1, data_cadastro=$2, preco=$3 imagem=$4 descricao=$5 WHERE id=$6 RETURNING id, titulo, data_cadastro, preco, imagem, descricao;';
       const values = [data.titulo, data.data_cadastro, data.preco, data.imagem, data.descricao];
       return await connect.query(sql, values);
     } catch (error) {
@@ -39,7 +39,7 @@ class Produto {
   static async delete(id) {
     try {
       const connect = await db.connect();
-      const sql = 'DELETE FROM produtos WHERE id=$1 RETURNING id, titulo, data_cadastro, preco, imagem, descricao;;';
+      const sql = 'DELETE FROM produto WHERE id=$1 RETURNING id, titulo, data_cadastro, preco, imagem, descricao;;';
       return await connect.query(sql, [id]);
     } catch (error) {
       console.error('Erro em delete:', error);
