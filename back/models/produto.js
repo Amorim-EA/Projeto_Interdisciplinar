@@ -11,6 +11,17 @@ class Produto {
     }
   }
 
+  static async selectOne(id) {
+    try {
+      const connect = await db.connect();
+      const sql = "SELECT * FROM produto WHERE id=$1";
+      return await connect.query(sql,[id]);
+    } catch (error) {
+      console.error('Erro em select:', error);
+      throw error;
+    }
+  }
+
   static async insert(data) {
     try {
       console.log("teste")

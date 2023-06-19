@@ -1,0 +1,84 @@
+.barra_nav {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 30%;
+   }
+   
+   .links {
+     text-decoration: none;
+     color: black;
+     padding: 10px;
+     border: 2px solid black;
+     border-radius: 10px;
+     width: 80px;
+     margin: 20px;
+     text-align: center;
+   }
+   
+   .container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-gap: 40px;
+     margin: auto;
+     width: 60%;
+     padding: 20px;
+   }
+   
+   .container > .card {
+     border: 2px inset black;
+     padding-left: 20px;
+     border-radius: 10px;
+     margin-bottom: 20px;
+     height: 130px;
+   }
+   
+   .titulo {
+     text-align: center;
+     text-shadow: 2px 2px black;
+   }
+   
+   .formulario {
+       margin: 0 auto;
+     margin-top: 100px;
+     width: 40%;
+     border: 3px solid black;
+     padding: 20px;
+     border-radius: 10px;
+   }
+   
+   .input_padrao {
+     display: block;
+     margin: 0 0 20px;
+     padding: 10px 0;
+     width: 97%;
+     background-color: transparent;
+     color: black;
+     border: none;
+     border-bottom: 3px outset black;
+   }
+   
+   .botoes {
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+   }
+   
+   .botoes a {
+    text-decoration: none;
+    border: 3px outset black;
+    font-size: 21px;
+    width: 31%;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+   }
+   
+   .botao {
+     border: 3px outset black;
+     font-size: 21px;
+     background-color: white;
+     color: black;
+     width: 31%;
+     border-radius: 10px;
+    }

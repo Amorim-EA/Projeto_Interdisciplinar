@@ -22,6 +22,17 @@ app.get('/produtos', async function(req, res){
   }
 });
 
+app.post('/produto', async function(req, res){
+  try {
+    var produto = await Produto.selectOne(req.body.id);
+    res.json(produto.rows[0]);
+  } catch (error) {
+    console.error('Erro ao buscar produto:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao buscar produto' });
+  }
+});
+
+
 app.post('/inserir', async function(req, res){
   try {
     var produto = await Produto.insert(req.body);
@@ -52,6 +63,6 @@ app.delete('/deletar', async function(req, res){
   }
 });
 
-app.listen(3000, function() {
-  console.log('App de Exemplo escutando na porta 3000!')
+app.listen(3004, function() {
+  console.log('App de Exemplo escutando na porta 3004!')
 });

@@ -1,4 +1,4 @@
-CREATE TABLE produto(
+CREATE TABLE produtos(
     id SERIAL PRIMARY KEY,
     titulo TEXT,
     data_cadastro DATE,
@@ -8,7 +8,7 @@ CREATE TABLE produto(
 );
 
 
-INSERT INTO produto(titulo,data_cadastro,preco,imagem,descricao) 
+INSERT INTO produtos(titulo,data_cadastro,preco,imagem,descricao) 
 VALUES
 ('The Last of Us Remastered Sony PS4 Digital', '2023-06-15', 59.90 , 'https://http2.mlstatic.com/D_NQ_NP_834042-MLA44342306303_122020-O.webp', 'Classificação M. Ano de lançamento: 2014. Desenvolvido por Naughty Dog. Gênero: ação e aventura. Está disponível para jogar online. É adequado para vários jogadores. Entretenimento digital. Diversão garantida.'),
 ('God of War Ragnarok Sony PS4 Digital', '2023-06-15', 159.90 , 'https://http2.mlstatic.com/D_NQ_NP_996306-MLA54009066647_022023-O.webp', 'Classificação M. Ano de lançamento: 2022. Desenvolvido por SIE Santa Monica Studio. Gênero: ação. Entretenimento digital. Diversão garantida.'),

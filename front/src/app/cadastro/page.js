@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import styles from '../page.module.css'
+import style from '../page.module.css'
 import { useRouter } from 'next/navigation'
 import style from '../page.module.css'
+import Link from 'next/link'
 
 export default function Cadastro() {
 
@@ -26,37 +27,42 @@ export default function Cadastro() {
 
         const produtoJson = JSON.stringify(produto);
 
-        fetch("", {
+        fetch("http://localhost:3004/produtos/", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
     return (
-        <div>
+        <div className={style.main}>
+
+            <h1 className={style.h1}>Cadastrar</h1>
+
+            <nav className={style.barra_nav}>
+              <Link className={style.links} href="/">Home</Link>
+              <Link className={style.links} href="/cadastro">Cadastrar</Link>
+            </nav>
+
             <form action='' onSubmit={cadastrar} className={style.formulario}>
-                <h1 className={styles.titulo_cad}>
-                    Cadastrar
-                </h1>
-                <input placeholder='Informe o nome do nome do produto' nome="titulo" type="text" className={style.input_padrao}
+                <input placeholder='Informe o nome do produto' nome="titulo" type="text" className={style.input_padrao}
                     onChange={e => setTitulo(e.target.value)}></input><br/>
 
-                <input placeholder='Informe a data de cadastro' nome="data_cadastro" type="text" className={style.input_padrao}
+                <input placeholder='Informe a data de cadastro' nome="data_cadastro" type="date" className={style.input_padrao}
                     onChange={e => setData_Cadastro(e.target.value)}></input><br/>
 
                 <input placeholder='Informe o preço' nome="preco" type="number" className={style.input_padrao}
                     onChange={e => setPreco(e.target.value)}></input><br/>
 
-                <input placeholder='Informe o URL da imagem' nome="imagem" type="number" className={style.input_padrao}
+                <input placeholder='Informe o URL da imagem' nome="imagem" type="text" className={style.input_padrao}
                     onChange={e => setImagem(e.target.value)}></input><br/>
 
-                <input placeholder='Faça uma breve descrição do produto' nome="descricao" type="number" className={style.input_padrao}
+                <input placeholder='Faça uma breve descrição do produto' nome="descricao" type="text" className={style.input_padrao}
                     onChange={e => setDescricao(e.target.value)}></input><br/>
 
                 <div className={style.botoes}>
-                <button type='submit' className={style.botao}>Cadastrar</button>
-                <a href='/'>Voltar</a>
-              </div>
+                    <button type='submit' className={style.botao}>Cadastrar</button>
+                    <a href='/'>Voltar</a>
+                </div>
             </form>
         </div>
     );

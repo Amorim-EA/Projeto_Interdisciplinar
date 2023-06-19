@@ -19,3 +19,5 @@ let connect = async function () {
 };
 
 module.exports = { connect };
+
+//postgres://postgres:postgres@127.0.0.1:5432/projeto-interdiciplinar
