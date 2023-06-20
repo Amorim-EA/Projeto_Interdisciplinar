@@ -12,7 +12,7 @@ export default async function VerMais({ params }){
 
   const idJson = JSON.stringify(id);
 
-  const req = await fetch("http://localhost:3004/produtos", {
+  const req = await fetch("http://localhost:3004/produto", {
       method: "POST",
       cache: "no-cache",
       mode: 'no-cors',
@@ -25,7 +25,7 @@ export default async function VerMais({ params }){
   const remover = () => {
       console.log(idJson)
       try {
-          fetch("http://localhost:3004/produtos", {
+          fetch("http://localhost:3004/produto", {
               method: "DELETE",
               headers: { 'content-type': 'application/json' },
               body: idJson
@@ -65,6 +65,5 @@ export default async function VerMais({ params }){
       </div>
  
     </main>
-    </div>
   )
 }

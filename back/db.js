@@ -7,7 +7,7 @@ let connect = async function () {
     }
 
     const pool = new Pool({
-      connectionString: 'postgres://gurjcvqg:LyBRWvNvQ2VgKGVcYxpuYS7YSINd1GBq@silly.db.elephantsql.com/gurjcvqg'
+      connectionString: 'postgres://postgres:postgres@127.0.0.1:5432/projeto-interdiciplinar'
     });
 
     global.connection = pool;
@@ -20,4 +20,4 @@ let connect = async function () {
 
 module.exports = { connect };
 
-//postgres://postgres:postgres@127.0.0.1:5432/projeto-interdiciplinar
+//postgres://gurjcvqg:LyBRWvNvQ2VgKGVcYxpuYS7YSINd1GBq@silly.db.elephantsql.com/gurjcvqg

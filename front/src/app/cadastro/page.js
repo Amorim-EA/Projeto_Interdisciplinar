@@ -26,7 +26,7 @@ export default function Cadastro() {
 
         const produtoJson = JSON.stringify(produto);
 
-        fetch("http://localhost:3004/produtos/", {
+        fetch("http://localhost:3004/produto/", {
             method: "POST",
             mode: 'no-cors',
             headers: { "content-Type": "application/json" },
@@ -35,7 +35,7 @@ export default function Cadastro() {
     }
     return (
         <main className={style.main}>
-            <div clasName={style.header}>
+            <div className={style.header}>
             <h1 className={style.h1}>Cadastrar</h1>
 
             <nav className={style.navbar}>
@@ -62,7 +62,7 @@ export default function Cadastro() {
                     rows="5" cols="30"></textarea><br/>
 
                 <div className={style.botoes}>
-                    <button type='submit' className={style.botaoC}>Cadastrar</button>
+                    <button type='submit' className={style.botao}>Cadastrar</button>
                     <a href='/' className={style.LinkV}>Voltar</a>
                 </div>
             </form>

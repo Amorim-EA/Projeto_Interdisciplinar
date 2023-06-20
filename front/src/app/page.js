@@ -4,7 +4,7 @@ import style from './page.module.css'
 import Link from 'next/link';
 
 export default async function Home() {
-  const req = await fetch("http://localhost:3004/produtos", {
+  const req = await fetch("http://localhost:3004/produto", {
     cache: "no-cache",
     mode: 'no-cors',
   });
@@ -34,7 +34,7 @@ export default async function Home() {
         <p className={style.precoC}>{item.preco}</p>
         
         <div className={style.botoes}>
-          <Link href={`produto/${item.id}`} className={linkV}>ver mais</Link>
+          <Link href={`produto/${item.id}`} className={style.links}>ver mais</Link>
         </div>
 
       </div>
