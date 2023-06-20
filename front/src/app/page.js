@@ -1,16 +1,15 @@
 "use client"
-import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import style from './page.module.css'
 import Link from 'next/link';
 
 export default async function Home() {
-  const router = useRouter();
   const req = await fetch("http://localhost:3004/produtos", {
-    cache: "no-cache"
+    cache: "no-cache",
+    mode: 'no-cors',
   });
 
-  const data = await req.json();
+  const produtos = await req.json();
 
   return (
     <main className={style.main}>
@@ -23,11 +22,11 @@ export default async function Home() {
     </div>
 
    <div className={style.container}>
-    {data.map(item => (
+    {produtos.map(item => (
 
       <div className={style.card} key={item.id}>
 
-        <Image src={item.imagem}></Image>
+        <Image src={item.imagem} width={30}></Image>
         <p>{item.titulo}</p>
         <p>{item.data_cadastro}</p>
         <p>{item.preco}</p>

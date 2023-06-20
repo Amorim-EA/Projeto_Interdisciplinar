@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import style from './page.module.css'
+import style from '../page.module.css'
 import Link from 'next/link'
 import { useRouter } from "next/navigation";
 
@@ -15,6 +15,7 @@ export default async function VerMais({ params }){
   const req = await fetch("http://localhost:3004/produtos", {
       method: "POST",
       cache: "no-cache",
+      mode: 'no-cors',
       headers: { 'content-type': 'application/json' },
       body: idJson
   })
