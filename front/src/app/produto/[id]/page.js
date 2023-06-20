@@ -37,34 +37,31 @@ export default async function VerMais({ params }){
   }
 
   return (
-  
-    <div>
-    <h1 className={style.titulo}></h1>
-
-    <nav className={style.barra_nav}>
+    <main className={style.main}>
+    <div className={header}>
+    <nav className={style.navbar}>
       <Link className={style.links} href="/">Home</Link>
       <Link className={style.links} href="/cadastro">Cadastrar</Link>
     </nav>
+    </div>
 
-    <main className={style.container}>
+    <div className={style.containerV}>
 
-      <div className={style.verDiv} key={item.id}>
-
-        <div className={style.verImg}>
-            <Image src={produto.imagem}></Image>
+        <div className={style.divImg}>
+            <Image src={produto.imgV}></Image>
         </div>
 
         <div className={style.verInfo}>
-            <h1>{produto.titulo}</h1>
-            <p>{produto.data_cadastro}</p>
-            <p>{produto.preco}</p>
-            <p>{produto.descricao}</p>
+            <h1 className={style.verInfo}>{produto.tituloV}</h1>
+            <p className={style.dataV}>{produto.data_cadastro}</p>
+            <p className={style.precoV}>R${produto.preco}</p>
+            <p className={style.descricao}>{produto.descricao}</p>
       </div>
       </div>
 
       <div className={style.botoes}>
-        <button onClick={e => e.preventDefault(remover())}>Remover</button>
-        <a href='/'>Voltar</a>
+        <button onClick={e => e.preventDefault(remover())} className={style.botaoR}>Remover</button>
+        <Link href='/' className={style.linkV}>Voltar</Link>
       </div>
  
     </main>

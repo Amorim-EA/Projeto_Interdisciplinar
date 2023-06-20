@@ -34,14 +34,15 @@ export default function Cadastro() {
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
     return (
-        <div className={style.main}>
+        <main className={style.main}>
+            <div clasName={style.header}>
+            <h1 className={style.h1}>Cadastrar</h1>
 
-            <h1 className={style.titulo}>Cadastrar</h1>
-
-            <nav className={style.barra_nav}>
+            <nav className={style.navbar}>
               <Link className={style.links} href="/">Home</Link>
               <Link className={style.links} href="/cadastro">Cadastrar</Link>
             </nav>
+            </div>
 
             <form action='' onSubmit={cadastrar} className={style.formulario}>
                 <input placeholder='Informe o nome do produto' nome="titulo" type="text" className={style.input_padrao}
@@ -61,11 +62,11 @@ export default function Cadastro() {
                     rows="5" cols="30"></textarea><br/>
 
                 <div className={style.botoes}>
-                    <button type='submit' className={style.botao}>Cadastrar</button>
-                    <a href='/'>Voltar</a>
+                    <button type='submit' className={style.botaoC}>Cadastrar</button>
+                    <a href='/' className={style.LinkV}>Voltar</a>
                 </div>
             </form>
-        </div>
+        </main>
     );
 
 }
