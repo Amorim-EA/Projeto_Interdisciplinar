@@ -42,7 +42,7 @@ export default function Cadastro() {
             </nav>
             </div>
         
-            <div className={containerC}>
+            <div className={style.containerC}>
             <form action='' onSubmit={cadastrar} className={style.formulario}>
                 <input placeholder='Informe o nome do produto' nome="titulo" type="text" className={style.input_padrao}
                     onChange={e => setTitulo(e.target.value)}></input>
