@@ -26,7 +26,7 @@ export default function Cadastro() {
 
         const produtoJson = JSON.stringify(produto);
 
-        fetch("http://localhost:3003/produtos/", {
+        fetch("https://projeto-interdisciplinar-seven.vercel.app/produtos/", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
