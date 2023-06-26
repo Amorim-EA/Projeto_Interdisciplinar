@@ -10,3 +10,8 @@ Projeto interdisciplinar entre as disciplinas
 - Turma Info 5B
 - Eder Amorim
 - Erick Amorim
+
+# Arquivos Rodando
+
+- back: https://projeto-interdisciplinar-seven.vercel.app/produtos
+- front: 
