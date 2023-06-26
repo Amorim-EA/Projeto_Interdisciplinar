@@ -63,6 +63,6 @@ app.delete('/produtos', async function(req, res){
   }
 });
 
-app.listen(3004, function() {
+app.listen(3003, function() {
   console.log('App de Exemplo escutando na porta 3004!')
 });
