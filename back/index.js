@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/produto', async function(req, res){
+app.get('/produtos', async function(req, res){
   try {
     var produtos = await Produto.select();
     res.json(produtos.rows);
@@ -22,7 +22,7 @@ app.get('/produto', async function(req, res){
   }
 });
 
-app.get('/produto', async function(req, res){
+app.get('/produtos', async function(req, res){
   try {
     var produto = await Produto.selectOne(req.body.id);
     res.json(produto.rows[0]);
@@ -33,7 +33,7 @@ app.get('/produto', async function(req, res){
 });
 
 
-app.post('/produto', async function(req, res){
+app.post('/produtos', async function(req, res){
   try {
     var produto = await Produto.insert(req.body);
     res.json(produto.rows);
@@ -43,7 +43,7 @@ app.post('/produto', async function(req, res){
   }
 });
 
-app.put('/produto', async function(req, res){
+app.put('/produtos', async function(req, res){
   try {
     var produto = await Produto.update(req.body.id, req.body);
     res.json(produto.rows);
@@ -53,7 +53,7 @@ app.put('/produto', async function(req, res){
   }
 });
 
-app.delete('/produto', async function(req, res){
+app.delete('/produtos', async function(req, res){
   try {
     var produto = await Produto.delete(req.body.id);
     res.json(produto.rows);
