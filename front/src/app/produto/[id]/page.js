@@ -12,7 +12,7 @@ export default async function VerMais({ params }){
 
   const idJson = JSON.stringify(id);
 
-  const req = await fetch("http://localhost:3003/produtos/", {
+  const req = await fetch("https://projeto-interdisciplinar-seven.vercel.app/produtos/", {
       method: "POST",
       cache: "no-cache",
       headers: { 'content-type': 'application/json' },
