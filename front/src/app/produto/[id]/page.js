@@ -24,7 +24,7 @@ export default async function VerMais({ params }){
   const remover = () => {
       console.log(idJson)
       try {
-          fetch("http://localhost:3004/produto", {
+          fetch("http://localhost:3003/produto", {
               method: "DELETE",
               headers: { 'content-type': 'application/json' },
               body: idJson
