@@ -24,7 +24,7 @@ export default async function VerMais({ params }){
   const remover = () => {
       console.log(idJson)
       try {
-          fetch("http://localhost:3003/produto", {
+          fetch("https://projeto-interdisciplinar-seven.vercel.app/produtos", {
               method: "DELETE",
               headers: { 'content-type': 'application/json' },
               body: idJson
