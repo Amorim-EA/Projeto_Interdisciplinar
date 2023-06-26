@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import style from '../page.module.css'
+import style from '../../page.module.css'
 import Link from 'next/link'
 import { useRouter } from "next/navigation";
 
@@ -36,31 +35,22 @@ export default async function VerMais({ params }){
   }
 
   return (
-    <div className={header}>
-    <h1 className={style.h1}>{produto.titulo}</h1>
-    <nav className={style.navbar}>
-      <Link className={style.links} href="/">Home</Link>
-      <Link className={style.links} href="/cadastro">Cadastrar</Link>
-    </nav>
-    </div>
-
     <div className={style.containerV}>
 
-        <div className={style.imgV}>
-            <Image src={produto.imgV}></img>
-        </div>
+          <div className={style.imgV}>
+              <img src={produto.imagem}/>
+          </div>
 
-        <div className={style.informacao}>
-            <h1 className={style.tituloV}>{produto.tituloV}</h1>
-            <p className={style.dataV}>{produto.data_cadastro}</p>
-            <p className={style.precoV}>R${produto.preco}</p>
-            <p className={style.descricao}>{produto.descricao}</p>
-      </div>
-      </div>
-
+          <div className={style.informacao}>
+              <h1 className={style.tituloV}>{produto.titulo}</h1>
+              <p className={style.dataV}>{produto.data_cadastro}</p>
+              <p className={style.precoV}>R${produto.preco}</p>
+              <p className={style.descricao}>{produto.descricao}</p>
+          </div>
       <div className={style.botoes}>
-        <button onClick={e => e.preventDefault(remover())} className={style.botaoR}>Remover</button>
-        <Link href='/' className={style.linkV}>Voltar</Link>
-      </div>
+              <button onClick={e => e.preventDefault(remover())} className={style.botaoR}>Remover</button>
+              <Link href='/' className={style.linkV}>Voltar</Link>
+          </div>
+    </div>
   )
 }

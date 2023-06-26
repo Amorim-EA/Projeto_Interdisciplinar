@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import style from '../page.module.css'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 
 export default function Cadastro() {
 
@@ -33,17 +32,8 @@ export default function Cadastro() {
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
     return (
-            <div className={style.header}>
-            <h1 className={style.h1}>Cadastrar</h1>
-
-            <nav className={style.navbar}>
-              <Link className={style.links} href="/">Home</Link>
-              <Link className={style.links} href="/cadastro">Cadastrar</Link>
-            </nav>
-            </div>
-        
             <div className={style.containerC}>
-            <form action='' onSubmit={cadastrar} className={style.formulario}>
+            <form onSubmit={cadastrar} className={style.formulario}>
                 <input placeholder='Informe o nome do produto' nome="titulo" type="text" className={style.input_padrao}
                     onChange={e => setTitulo(e.target.value)}></input>
 

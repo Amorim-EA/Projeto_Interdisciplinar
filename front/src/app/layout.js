@@ -1,5 +1,6 @@
-import style from './page.module.css'
-import { Inter } from 'next/font/google'
+import style from './page.module.css';
+import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,12 +12,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body className={style.main}>
+      <div className={style.header}>
+      <h1 className={style.h1}>Produtos</h1>
+
+      <div className={style.navbar}>
+        <Link className={style.links} href="/cadastro">cadastrar</Link>
+      </div>
+      
+    </div>
+
       {children}
-      <div className={style.foote}r>
-      <p>copzright: eder da silva amorim e erick da silva amorim</p>
+
+      <div className={style.footer}>
+        <p>copzright: eder da silva amorim e erick da silva amorim</p>
       </div>
       </body>
+
     </html>
   )
 }

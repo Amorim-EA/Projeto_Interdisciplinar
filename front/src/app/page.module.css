@@ -3,8 +3,8 @@
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vh;;
+  height: 100%;
+  width: 100%;
 }
 
 .header {
@@ -63,7 +63,7 @@
     background-color: black;
     color: white;
     height: 50px;
-    width: 100vh;
+    width: 100%;
     text-align: center;
 } 
 
@@ -73,7 +73,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: space-around;
-    margin: 10px;
+    margin: 0 auto;
     background-color: #f2f2f2;
 }
 
@@ -100,18 +100,16 @@
 
 /*cadastro*/
 .containerC{
-  width: 100vh;
-  display: grid;
-  grid-auto-columns: auto;
-  justify-content: space-around;
+  width: 100%;
   background-color: #f2f2f2;
   border-radius: 4px;
+  margin: 0 40%;
 }
 
 .formulario {
     display: block;
     margin-top: 50px;
-    width: 40vh;
+    width: 40%;
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -151,7 +149,7 @@
     display: grid;
     grid-template-columns: auto auto;
     margin: 10px 320px;
-    width: 62vh;
+    width: 62%;
 }
 
 .imgV {
@@ -163,7 +161,7 @@
 .informacao {
   display: block;
   flex-wrap: wrap;
-  width: 35vh;
+  width: 35%;
   border-left: 2px solid black;
   border-radius: 5px;
   background-color: #ffffff;
