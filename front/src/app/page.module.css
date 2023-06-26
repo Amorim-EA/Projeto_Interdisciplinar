@@ -1,16 +1,25 @@
+/*global*/
 .main {
-    text-align: center;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vh;;
 }
 
 .header {
-    background-color: black
+    background-color: black;
+    text-align: center;
 }
 
 .h1 {
-    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px #fff;
     font-size: 50px;
-    text-shadow: 2px 2px black;
 }
+
+
 
 .navbar {
     border-top: 2px solid white;
@@ -18,114 +27,64 @@
     display: flex;
     background-color: #515151;
     justify-content: space-evenly;
-}
-   
-   .links {
+}   
+
+.links {
      text-decoration: none;
+     font-size: 20px;
      color: white;
-     padding: 10px;
      border: 2px solid white;
      border-radius: 10px;
-     width: 80px;
-     margin: 20px;
-     text-align: center;
-   }
-   
-   .formulario {
-     margin: 0 auto;
-     margin-top: 50px;
-     width: 50%;
-     border: 3px solid black;
-     padding: 20px;
-     border-radius: 10px;
-   }
-   
-   .input_padrao {
-    display: block;
-    margin: 0 0 20px;
-    padding: 5px;
-    width: 97%;
-    background-color: transparent;
-    color: black;
-    border: none;
-    border-bottom: 3px outset black;
-   }
+     margin: 5px 0;
+     padding: 10px;
+     background-color: black;
+}
 
-   .text_area{
-    display: block;
-    margin: 0 0 20px;
-    padding: 5px;
-    width: 97%;
-    background-color: transparent;
-    color: black;
-    border: none;
-    border: 3px outset black;
-   }
-   
-   .botoes {
+.botoes {
     display: flex;
-    justify-content: space-between;
-    width: 97%;
-   }
-   
-   .botoes a {
+    justify-content: space-around;
+    width: 98%;
+    text-align: center;
+}
+
+.linkV {
+    margin: 4px 0;
+    background-color: #1E90FF;
+    font-size: 18px;
+    padding: 2px;
     text-decoration: none;
-    border: 3px outset black;
-    font-size: 21px;
-    width: 31%;
+    width: 40%;
     text-align: center;
     color: black;
-    border-radius: 10px;
-   }
-   
-   .botao {
-     border: 3px outset black;
-     font-size: 21px;
-     background-color: white;
-     color: black;
-     width: 31%;
-     border-radius: 10px;
-    }
-    
-/*Ver mais*/
-.containerv {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 10px;
-    background-color: white;
-    width: 60%;
-    margin: auto;
-}
-  
-.botaoV {
-    border: 3px outset black;
-    font-size: 21px;
-    background-color: white;
-    color: black;
-    width: 31%;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
-.container {
+.footer {
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 100vh;
+    text-align: center;
+} 
+
+/*page principal*/
+.containerP {
+    width: 100vh;
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: space-around;
     margin: 10px;
-    padding: 30px;
-    background-color: white;
+    background-color: #f2f2f2;
 }
 
 .card {
     width: 250px;
-    border: 2px inset black;
-    padding-left: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    box-shadow: inset;
+    margin: 20px 10px;
     display: block;
     flex-wrap: wrap;
     text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .imgC {
@@ -139,9 +98,100 @@
     font-size: 20px;
 }
 
-.linkV {
-    align-self: center;
-    background-color: grey;
-    color: white;
-    font-size: 10px;
+/*cadastro*/
+.containerC{
+  width: 100vh;
+  display: grid;
+  grid-auto-columns: auto;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.formulario {
+    display: block;
+    margin-top: 50px;
+    width: 40vh;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input_padrao {
+    margin: 10px 70px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-bottom: 3px outset black;
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text_area{
+    margin: 10px 70px;
+    padding: 5px;
+    width: 80%;
+    background-color: transparent;
+    border: 3px outset black;
+}
+
+.botaoC {
+    background-color: #0BDA51;
+    color: black;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+/*Ver mais*/
+.containerV {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px 320px;
+    width: 62vh;
+}
+
+.imgV {
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.informacao {
+  display: block;
+  flex-wrap: wrap;
+  width: 35vh;
+  border-left: 2px solid black;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+
+.botaoR {
+    color: black;
+    width: 40%;
+    margin: 4px 0;
+    font-size: 18px;
+    background-color: #FF0000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tituloV {
+  text-align: center;
+}
+
+.precoV {
+  text-align: center;
+}
+
+.dataV {
+  text-align: center;
+}
+
+.descricao {
+  margin: 10px 20px;
 }
