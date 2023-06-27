@@ -1,8 +1,5 @@
 import style from './page.module.css';
-import { Inter } from 'next/font/google';
 import Link from 'next/link';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
