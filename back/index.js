@@ -24,7 +24,7 @@ app.get('/produtos', async function(req, res){
 
 app.get('/produtos', async function(req, res){
   try {
-    var produto = await Produto.selectOne(req.body.id);
+    var produto = await Produto.selectOne(req.query.id);
     res.json(produto.rows[0]);
   } catch (error) {
     console.error('Erro ao buscar produto:', error);
