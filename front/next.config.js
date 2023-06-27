@@ -5,7 +5,7 @@ const nextConfig = {
         return[
             {
                 source: '/api/:path*',
-                destination: 'http://localhost:3004/',
+                destination: 'https://projeto-interdisciplinar-seven.vercel.app/produtos',
             },
         ]
       },
